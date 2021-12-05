@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>ICS 536-E NFC Reader</title>
+
+    <!-- Bootstrap core CSS -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    
+    <!-- Custom styles for this template -->
+    <link href="jumbotron.css" rel="stylesheet">
+    <script>
+      function loadUrl() {
+        let params = new URLSearchParams(location.search);
+        console.log()
+        document.getElementById("serial").innerHTML = params.get('serial');
+        document.getElementById("hw").innerHTML = params.get('hw');
+        document.getElementById("fw").innerHTML = params.get('fw');
+        document.getElementById("runtime").innerHTML = params.get('runtime');
+      }
+</script>
+
+  </head>
+
+  <body onload="loadUrl()">
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">ICS 536-E NFC Reader</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="navbar" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Products</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              About Us
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="#">Company</a>
+              <a class="dropdown-item" href="#">Contact</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container">
+      <!-- Example row of columns -->
+      <div class="row" style="height:300px">
+        <div class="col-md-4">
+          <h1>Tool Information.</h1>
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">Field</th>
+                <th scope="col">Data</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Serial</td>
+                <td id="serial"></td>
+              </tr>
+              <tr>
+                <td>Hardware Version</td>
+                <td id="hw"></td>
+              </tr>
+              <tr>
+                <td>Firmware Version</td>
+                <td id="fw"></td>
+              </tr>
+              <tr>
+                <td>Runtime</td>
+                <td id="runtime"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <hr>
+
+      <footer>
+        <p>&copy; Placeholder 2021</p>
+      </footer>
+    </div> <!-- /container -->
+
+    
+</main>
+</body>
+</html>
